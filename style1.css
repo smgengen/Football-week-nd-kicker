@@ -1,0 +1,37 @@
+/* 
+----Design Token---- 
+the custom css properties are define clobally making them available to every
+element in the document
+*/
+:root {
+    --color-primary: #00a651;
+    --color-surface:  #040000a8;
+    --color-text: #f0f0f0;
+    --color-accent: #00c96b;
+    --font-main: 'Inter', sans-serif;
+    --color-nav-link: #100606;
+}
+
+/* 
+---- Reset ----- 
+it stops the brower from adding the
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #6B0F1A 0%,    /* garnet */
+        #9B1A2A 25%,   /* deep ruby */
+        #3D0A2E 50%,   /* plum midpoint */
+        #1A2A6C 75%,   /* midnight blue */
+        #0D1B4B 100%   /* navy */
+    );
+    color: var(--color-text);
+    font-family: var(--font-main), sans-serif;
+}
