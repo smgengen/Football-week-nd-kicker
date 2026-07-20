@@ -1,37 +1,160 @@
-/* 
-----Design Token---- 
-the custom css properties are define clobally making them available to every
-element in the document
-*/
-:root {
-    --color-primary: #00a651;
-    --color-surface:  #040000a8;
-    --color-text: #f0f0f0;
-    --color-accent: #00c96b;
-    --font-main: 'Inter', sans-serif;
-    --color-nav-link: #100606;
+/* --- About --- */
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* 
----- Reset ----- 
-it stops the brower from adding the
-*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
-body {
-    min-height: 100vh;
-    background: linear-gradient(
-        135deg,
-        #6B0F1A 0%,    /* garnet */
-        #9B1A2A 25%,   /* deep ruby */
-        #3D0A2E 50%,   /* plum midpoint */
-        #1A2A6C 75%,   /* midnight blue */
-        #0D1B4B 100%   /* navy */
-    );
-    color: var(--color-text);
-    font-family: var(--font-main), sans-serif;
+.about-story {
+  background-color: var(--color-surface);
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.about-story h3,
+.about-values h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-story p {
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-story p:last-child {
+  margin-bottom: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.value-card {
+  background-color: var(--color-surface);
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.value-card:hover {
+  border-color: var(--color-primary);
+}
+
+.value-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.value-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  font-size: 0.85rem;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+
+/* --- Players --- */
+.players-section {
+  padding: 4rem 2rem;
+  background-color: var(--color-dark);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.section-header p {
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.player-card {
+  background-color: var(--color-surface);
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.player-card:hover {
+  border-color: var(--color-primary);
+}
+
+.player-avatar {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.player-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.player-position {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.player-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 1rem;
+}
+
+.player-stat p {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.player-stat span {
+  font-size: 0.75rem;
+  color: #aaa;
 }
